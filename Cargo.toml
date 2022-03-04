@@ -1,0 +1,20 @@
+[package]
+name = "cve-2021-4034"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libc = { version = "0.2.114" }
+
+[lib]
+name = "pwnkit"
+path = "src/lib.rs"
+crate-type = [ "dylib" ]
+
+[[bin]]
+name = "prep"
+path = "src/prep.rs"
+
+[[bin]]
+name = "pwn"
+path = "src/main.rs"
